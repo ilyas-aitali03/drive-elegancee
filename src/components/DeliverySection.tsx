@@ -113,6 +113,10 @@ const DeliverySection: React.FC = () => {
                   </div>
                   
                   <Button
+                    onClick={() => {
+                      const message = encodeURIComponent(`Hello! I would like to request car delivery to ${selectedLocation}. Please provide details about available cars and delivery schedule.`);
+                      window.open(`https://wa.me/212600000000?text=${message}`, '_blank');
+                    }}
                     className="w-full mt-6 bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-xl transition-all duration-300"
                   >
                     Request Delivery to {selectedLocation}

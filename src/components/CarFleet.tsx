@@ -3,6 +3,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { Car, Users, Settings } from 'lucide-react';
+import daciaImage from '@/assets/car-dacia-logan.jpg';
+import hyundaiImage from '@/assets/car-hyundai-i10.jpg';
+import suzukiImage from '@/assets/car-suzuki-swift.jpg';
 import clioImage from '@/assets/car-clio.jpg';
 import peugeotImage from '@/assets/car-peugeot.jpg';
 import toyotaImage from '@/assets/car-toyota.jpg';
@@ -13,23 +16,67 @@ const CarFleet: React.FC = () => {
   const cars = [
     {
       id: 1,
-      name: 'Renault Clio',
+      name: 'Dacia Logan',
       category: t('economy'),
-      image: clioImage,
-      price: '25',
+      image: daciaImage,
+      price: '180',
+      currency: 'MAD',
       specs: {
         transmission: t('manual'),
-        doors: 5,
+        doors: 4,
         seats: 5
       },
       popular: true
     },
     {
       id: 2,
+      name: 'Hyundai i10',
+      category: t('compact'),
+      image: hyundaiImage,
+      price: '220',
+      currency: 'MAD',
+      specs: {
+        transmission: t('manual'),
+        doors: 5,
+        seats: 4
+      },
+      popular: false
+    },
+    {
+      id: 3,
+      name: 'Suzuki Swift',
+      category: t('compact'),
+      image: suzukiImage,
+      price: '280',
+      currency: 'MAD',
+      specs: {
+        transmission: t('automatic'),
+        doors: 5,
+        seats: 5
+      },
+      popular: true
+    },
+    {
+      id: 4,
+      name: 'Renault Clio',
+      category: t('economy'),
+      image: clioImage,
+      price: '250',
+      currency: 'MAD',
+      specs: {
+        transmission: t('manual'),
+        doors: 5,
+        seats: 5
+      },
+      popular: false
+    },
+    {
+      id: 5,
       name: 'Peugeot 308',
       category: t('compact'),
       image: peugeotImage,
-      price: '35',
+      price: '350',
+      currency: 'MAD',
       specs: {
         transmission: t('automatic'),
         doors: 5,
@@ -38,11 +85,12 @@ const CarFleet: React.FC = () => {
       popular: false
     },
     {
-      id: 3,
+      id: 6,
       name: 'Toyota Land Cruiser',
       category: t('suv'),
       image: toyotaImage,
-      price: '85',
+      price: '850',
+      currency: 'MAD',
       specs: {
         transmission: t('automatic'),
         doors: 5,
@@ -107,7 +155,7 @@ const CarFleet: React.FC = () => {
                   </div>
                   <div className="text-right">
                     <div className="text-2xl font-bold text-luxury-gold">
-                      ${car.price}
+                      {car.price} {car.currency}
                     </div>
                     <div className="text-sm text-gray-500">{t('perDay')}</div>
                   </div>
@@ -147,7 +195,7 @@ const CarFleet: React.FC = () => {
         {/* View All Cars Button */}
         <div className="text-center mt-12">
           <Button
-            variant="outline"
+            onClick={() => handleWhatsAppBooking('all available cars')}
             className="border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark px-8 py-3 text-lg rounded-full transition-all duration-300"
           >
             View All Cars

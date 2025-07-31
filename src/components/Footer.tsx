@@ -55,13 +55,22 @@ const Footer: React.FC = () => {
             
             {/* Social Media */}
             <div className="flex space-x-3 mt-6">
-              <button className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300">
+              <button 
+                onClick={() => window.open('https://facebook.com/moroccorent', '_blank')}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300"
+              >
                 <Facebook className="w-5 h-5" />
               </button>
-              <button className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300">
+              <button 
+                onClick={() => window.open('https://instagram.com/moroccorent', '_blank')}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300"
+              >
                 <Instagram className="w-5 h-5" />
               </button>
-              <button className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300">
+              <button 
+                onClick={() => window.open('https://twitter.com/moroccorent', '_blank')}
+                className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center hover:bg-luxury-gold hover:text-luxury-dark transition-all duration-300"
+              >
                 <Twitter className="w-5 h-5" />
               </button>
             </div>

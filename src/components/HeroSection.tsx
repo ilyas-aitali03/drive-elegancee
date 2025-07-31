@@ -1,9 +1,8 @@
 import React from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { Button } from '@/components/ui/button';
-import { MessageCircle } from 'lucide-react';
+import { MessageCircle, Play } from 'lucide-react';
 import CarCarousel from './CarCarousel';
-import LanguageSwitcher from './LanguageSwitcher';
 
 const HeroSection: React.FC = () => {
   const { t } = useLanguage();
@@ -13,13 +12,15 @@ const HeroSection: React.FC = () => {
     window.open(`https://wa.me/212600000000?text=${message}`, '_blank');
   };
 
-  return (
-    <section className="relative min-h-screen flex items-center luxury-gradient overflow-hidden">
-      {/* Language Switcher */}
-      <div className="absolute top-8 right-8 z-50">
-        <LanguageSwitcher />
-      </div>
+  const scrollToFleet = () => {
+    const element = document.getElementById('fleet');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
+  return (
+    <section id="hero" className="relative min-h-screen flex items-center luxury-gradient overflow-hidden pt-20">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute inset-0 bg-gradient-radial from-luxury-gold/10 to-transparent" />
@@ -51,8 +52,10 @@ const HeroSection: React.FC = () => {
             
             <Button
               variant="outline"
-              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300"
+              onClick={scrollToFleet}
+              className="border-2 border-white/30 text-white hover:bg-white/10 hover:border-white/50 px-8 py-4 text-lg rounded-full backdrop-blur-sm transition-all duration-300 group"
             >
+              <Play className="w-5 h-5 mr-2 group-hover:animate-pulse" />
               View Fleet
             </Button>
           </div>

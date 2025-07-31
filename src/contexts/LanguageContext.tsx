@@ -27,8 +27,8 @@ const translations = {
     whyChooseTitle: 'Why Choose Us',
     trustTitle: 'Trusted Service',
     trustDesc: 'Over 10 years of reliable car rental service in Morocco',
-    deliveryTitle: 'Free Delivery',
-    deliveryDesc: 'We deliver your car wherever you are in major cities',
+    deliveryTitle: 'Paid Delivery',
+    deliveryDesc: 'We deliver your car wherever you are in major cities for 50 MAD',
     pricesTitle: 'Best Prices',
     pricesDesc: 'Competitive rates with no hidden fees',
     
@@ -46,8 +46,8 @@ const translations = {
     seats: 'seats',
     
     // Delivery
-    deliveryToggleTitle: 'Get your car delivered to your address',
-    deliveryInfo: 'Free delivery within city limits. Additional charges may apply for locations outside the city.',
+    deliveryToggleTitle: 'Get your car delivered to your address (50 MAD)',
+    deliveryInfo: 'Delivery service available within city limits for 50 MAD. Additional charges may apply for locations outside the city.',
     selectLocation: 'Select your location',
     
     // Testimonials
@@ -85,8 +85,8 @@ const translations = {
     whyChooseTitle: 'Pourquoi Nous Choisir',
     trustTitle: 'Service de Confiance',
     trustDesc: 'Plus de 10 ans de service de location fiable au Maroc',
-    deliveryTitle: 'Livraison Gratuite',
-    deliveryDesc: 'Nous livrons votre voiture où que vous soyez dans les grandes villes',
+    deliveryTitle: 'Livraison Payante',
+    deliveryDesc: 'Nous livrons votre voiture où que vous soyez dans les grandes villes pour 50 MAD',
     pricesTitle: 'Meilleurs Prix',
     pricesDesc: 'Tarifs compétitifs sans frais cachés',
     
@@ -104,8 +104,8 @@ const translations = {
     seats: 'places',
     
     // Delivery
-    deliveryToggleTitle: 'Faites livrer votre voiture à votre adresse',
-    deliveryInfo: 'Livraison gratuite dans les limites de la ville. Des frais supplémentaires peuvent s\'appliquer pour les emplacements en dehors de la ville.',
+    deliveryToggleTitle: 'Faites livrer votre voiture à votre adresse (50 MAD)',
+    deliveryInfo: 'Service de livraison disponible dans les limites de la ville pour 50 MAD. Des frais supplémentaires peuvent s\'appliquer pour les emplacements en dehors de la ville.',
     selectLocation: 'Sélectionnez votre emplacement',
     
     // Testimonials
@@ -143,8 +143,8 @@ const translations = {
     whyChooseTitle: 'لماذا تختارنا',
     trustTitle: 'خدمة موثوقة',
     trustDesc: 'أكثر من 10 سنوات من خدمة تأجير السيارات الموثوقة في المغرب',
-    deliveryTitle: 'توصيل مجاني',
-    deliveryDesc: 'نوصل سيارتك أينما كنت في المدن الكبرى',
+    deliveryTitle: 'توصيل مدفوع',
+    deliveryDesc: 'نوصل سيارتك أينما كنت في المدن الكبرى مقابل 50 درهم',
     pricesTitle: 'أفضل الأسعار',
     pricesDesc: 'أسعار تنافسية بدون رسوم خفية',
     
@@ -162,8 +162,8 @@ const translations = {
     seats: 'مقاعد',
     
     // Delivery
-    deliveryToggleTitle: 'احصل على سيارتك مُسلمة إلى عنوانك',
-    deliveryInfo: 'توصيل مجاني داخل حدود المدينة. قد تنطبق رسوم إضافية للمواقع خارج المدينة.',
+    deliveryToggleTitle: 'احصل على سيارتك مُسلمة إلى عنوانك (50 درهم)',
+    deliveryInfo: 'خدمة التوصيل متاحة داخل حدود المدينة مقابل 50 درهم. قد تنطبق رسوم إضافية للمواقع خارج المدينة.',
     selectLocation: 'اختر موقعك',
     
     // Testimonials
