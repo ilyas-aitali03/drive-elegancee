@@ -9,34 +9,48 @@ All colors MUST be HSL.
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 0 0% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 8%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 0 0% 8%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 0 0% 96%;
+    --secondary-foreground: 0 0% 8%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 100% 51%;
+    --accent-foreground: 0 0% 8%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 8%;
 
-    --radius: 0.5rem;
+    --luxury-gold: 45 100% 51%;
+    --luxury-gold-light: 45 100% 65%;
+    --luxury-dark: 0 0% 5%;
+    --luxury-gray: 0 0% 15%;
+    --luxury-light-gray: 0 0% 97%;
+
+    --gradient-hero: linear-gradient(135deg, hsl(var(--luxury-dark)), hsl(var(--luxury-gray)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--luxury-gold)), hsl(var(--luxury-gold-light)));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100% / 0.05), hsl(0 0% 100% / 0.02));
+
+    --shadow-luxury: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-gold: 0 10px 40px -10px hsl(var(--luxury-gold) / 0.3);
+    --shadow-elegant: 0 8px 32px hsl(0 0% 0% / 0.12);
+
+    --radius: 1rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +114,35 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
+  }
+}
+
+@layer components {
+  .luxury-gradient {
+    background: var(--gradient-hero);
+  }
+  
+  .gold-gradient {
+    background: var(--gradient-gold);
+  }
+  
+  .glass-effect {
+    background: hsl(0 0% 100% / 0.1);
+    backdrop-filter: blur(20px);
+    border: 1px solid hsl(0 0% 100% / 0.2);
+  }
+  
+  .hover-lift {
+    @apply transition-all duration-300 hover:translate-y-[-8px] hover:shadow-[var(--shadow-luxury)];
+  }
+  
+  .fade-in-up {
+    @apply animate-[fadeInUp_0.6s_ease-out_forwards];
+  }
+  
+  .parallax-scroll {
+    transform: translateZ(0);
+    will-change: transform;
   }
 }
