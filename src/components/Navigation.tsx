@@ -28,7 +28,7 @@ const Navigation: React.FC = () => {
 
   const handleWhatsAppClick = () => {
     const message = encodeURIComponent("Hello! I'm interested in renting a car. Can you help me?");
-    window.open(`https://wa.me/212600000000?text=${message}`, '_blank');
+    window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
   };
 
   return (

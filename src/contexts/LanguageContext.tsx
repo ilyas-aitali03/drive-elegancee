@@ -19,16 +19,16 @@ const translations = {
     
     // Hero Section
     heroTitle: 'Premium Car Rental',
-    heroSubtitle: 'in Morocco',
-    heroDescription: 'Experience luxury and comfort with our premium fleet. From business trips to vacation adventures, we have the perfect vehicle for every journey.',
-    reserveNow: 'Reserve Now',
+    heroSubtitle: 'in Laâyoune, Morocco',
+    heroDescription: 'Experience luxury and comfort with our premium fleet in Laâyoune. From business trips to vacation adventures, we have the perfect vehicle for every journey in southern Morocco.',
+    reserveNow: 'Book Now',
     
     // Why Choose Us
     whyChooseTitle: 'Why Choose Us',
     trustTitle: 'Trusted Service',
-    trustDesc: 'Over 10 years of reliable car rental service in Morocco',
+    trustDesc: 'Over 10 years of reliable car rental service in Laâyoune and southern Morocco',
     deliveryTitle: 'Paid Delivery',
-    deliveryDesc: 'We deliver your car wherever you are in major cities for 50 MAD',
+    deliveryDesc: 'We deliver your car anywhere in Laâyoune for just 50 MAD',
     pricesTitle: 'Best Prices',
     pricesDesc: 'Competitive rates with no hidden fees',
     
@@ -77,16 +77,16 @@ const translations = {
     
     // Hero Section
     heroTitle: 'Location de Voitures',
-    heroSubtitle: 'Premium au Maroc',
-    heroDescription: 'Découvrez le luxe et le confort avec notre flotte premium. Des voyages d\'affaires aux aventures de vacances, nous avons le véhicule parfait pour chaque trajet.',
-    reserveNow: 'Réserver',
+    heroSubtitle: 'Premium à Laâyoune, Maroc',
+    heroDescription: 'Découvrez le luxe et le confort avec notre flotte premium à Laâyoune. Des voyages d\'affaires aux aventures de vacances, nous avons le véhicule parfait pour chaque trajet dans le sud du Maroc.',
+    reserveNow: 'Réservez maintenant',
     
     // Why Choose Us
     whyChooseTitle: 'Pourquoi Nous Choisir',
     trustTitle: 'Service de Confiance',
-    trustDesc: 'Plus de 10 ans de service de location fiable au Maroc',
+    trustDesc: 'Plus de 10 ans de service de location fiable à Laâyoune et dans le sud du Maroc',
     deliveryTitle: 'Livraison Payante',
-    deliveryDesc: 'Nous livrons votre voiture où que vous soyez dans les grandes villes pour 50 MAD',
+    deliveryDesc: 'Nous livrons votre voiture partout à Laâyoune pour seulement 50 MAD',
     pricesTitle: 'Meilleurs Prix',
     pricesDesc: 'Tarifs compétitifs sans frais cachés',
     
@@ -135,16 +135,16 @@ const translations = {
     
     // Hero Section
     heroTitle: 'تأجير السيارات',
-    heroSubtitle: 'المميز في المغرب',
-    heroDescription: 'استمتع بالفخامة والراحة مع أسطولنا المميز. من رحلات العمل إلى مغامرات العطلات، لدينا المركبة المثالية لكل رحلة.',
+    heroSubtitle: 'المميز في العيون، المغرب',
+    heroDescription: 'استمتع بالفخامة والراحة مع أسطولنا المميز في العيون. من رحلات العمل إلى مغامرات العطلات، لدينا المركبة المثالية لكل رحلة في جنوب المغرب.',
     reserveNow: 'احجز الآن',
     
     // Why Choose Us
     whyChooseTitle: 'لماذا تختارنا',
     trustTitle: 'خدمة موثوقة',
-    trustDesc: 'أكثر من 10 سنوات من خدمة تأجير السيارات الموثوقة في المغرب',
+    trustDesc: 'أكثر من 10 سنوات من خدمة تأجير السيارات الموثوقة في العيون وجنوب المغرب',
     deliveryTitle: 'توصيل مدفوع',
-    deliveryDesc: 'نوصل سيارتك أينما كنت في المدن الكبرى مقابل 50 درهم',
+    deliveryDesc: 'نوصل سيارتك في أي مكان في العيون مقابل 50 درهم فقط',
     pricesTitle: 'أفضل الأسعار',
     pricesDesc: 'أسعار تنافسية بدون رسوم خفية',
     
@@ -162,8 +162,8 @@ const translations = {
     seats: 'مقاعد',
     
     // Delivery
-    deliveryToggleTitle: 'احصل على سيارتك مُسلمة إلى عنوانك (50 درهم)',
-    deliveryInfo: 'خدمة التوصيل متاحة داخل حدود المدينة مقابل 50 درهم. قد تنطبق رسوم إضافية للمواقع خارج المدينة.',
+    deliveryToggleTitle: 'احصل على سيارتك مُسلمة إلى عنوانك في العيون (50 درهم)',
+    deliveryInfo: 'خدمة التوصيل متاحة في جميع أنحاء العيون مقابل 50 درهم. خدمة سريعة وموثوقة.',
     selectLocation: 'اختر موقعك',
     
     // Testimonials

@@ -18,7 +18,7 @@ const Footer: React.FC = () => {
               <div className="text-xl font-bold">MoroccoRent</div>
             </div>
             <p className="text-white/80 leading-relaxed">
-              Premium car rental service in Morocco. Experience luxury and comfort with our premium fleet.
+              Premium car rental service in Laâyoune, Morocco. Experience luxury and comfort with our premium fleet in southern Morocco.
             </p>
           </div>
 
