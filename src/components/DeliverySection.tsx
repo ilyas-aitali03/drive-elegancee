@@ -114,11 +114,40 @@ const DeliverySection: React.FC = () => {
                   
                   <Button
                     onClick={() => {
+                       // Create delivery notification sound
+                       const playDeliverySound = () => {
+                         const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+                         const oscillator = audioContext.createOscillator();
+                         const gainNode = audioContext.createGain();
+                         
+                         oscillator.connect(gainNode);
+                         gainNode.connect(audioContext.destination);
+                         
+                         // Delivery notification sound
+                         oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+                         oscillator.frequency.setValueAtTime(600, audioContext.currentTime + 0.1);
+                         oscillator.frequency.setValueAtTime(800, audioContext.currentTime + 0.2);
+                         
+                         gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+                         gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.05);
+                         gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.3);
+                         
+                         oscillator.start(audioContext.currentTime);
+                         oscillator.stop(audioContext.currentTime + 0.3);
+                       };
+
+                       try {
+                         playDeliverySound();
+                       } catch (error) {
+                         console.log('Audio not supported');
+                       }
+
                       const message = encodeURIComponent(`Hello! I would like to request car delivery to ${selectedLocation} in Laâyoune. Please provide details about available cars and delivery schedule.`);
-                      window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
+                       window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
                     }}
-                    className="w-full mt-6 bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-xl transition-all duration-300"
+                    className="w-full mt-6 bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-xl transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-luxury-gold/30 group relative overflow-hidden"
                   >
+                    <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
                     Request Delivery to {selectedLocation}
                   </Button>
                 </div>

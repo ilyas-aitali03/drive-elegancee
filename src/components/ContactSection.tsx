@@ -114,17 +114,19 @@ const ContactSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+              className="bg-green-500 hover:bg-green-600 text-white font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-green-500/30 group relative overflow-hidden"
             >
-              <MessageCircle className="w-5 h-5 mr-2" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+              <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-bounce" />
               Chat on WhatsApp
             </Button>
             
             <Button
               onClick={handlePhoneClick}
-              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105"
+              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-luxury-gold/30 group relative overflow-hidden"
             >
-              <Phone className="w-5 h-5 mr-2" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+              <Phone className="w-5 h-5 mr-2 group-hover:animate-pulse" />
               Call Now
             </Button>
           </div>

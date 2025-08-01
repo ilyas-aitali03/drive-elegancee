@@ -101,6 +101,34 @@ const CarFleet: React.FC = () => {
   ];
 
   const handleWhatsAppBooking = (carName: string) => {
+    // Create car engine sound effect
+    const playCarEngineSound = () => {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      // Car engine revving sound
+      oscillator.frequency.setValueAtTime(100, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(300, audioContext.currentTime + 0.2);
+      oscillator.frequency.exponentialRampToValueAtTime(180, audioContext.currentTime + 0.5);
+      
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.08, audioContext.currentTime + 0.05);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.5);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.5);
+    };
+
+    try {
+      playCarEngineSound();
+    } catch (error) {
+      console.log('Audio not supported');
+    }
+
     const message = encodeURIComponent(`Hello! I'm interested in renting the ${carName} in Laâyoune. Can you provide more details?`);
     window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
   };
@@ -180,8 +208,10 @@ const CarFleet: React.FC = () => {
                 {/* Book Button */}
                 <Button
                   onClick={() => handleWhatsAppBooking(car.name)}
-                  className="w-full bg-luxury-dark hover:bg-luxury-gold hover:text-luxury-dark text-white font-semibold py-3 rounded-xl transition-all duration-300 group-hover:scale-105"
+                  className="w-full bg-luxury-dark hover:bg-luxury-gold hover:text-luxury-dark text-white font-semibold py-3 rounded-xl transition-all duration-500 group-hover:scale-105 relative overflow-hidden booking-button"
                 >
+                  <span className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold/20 to-transparent -translate-x-full hover:translate-x-full transition-transform duration-700"></span>
+                  <span className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-0 h-0 bg-luxury-gold rounded-full opacity-0 hover:w-full hover:h-full hover:opacity-10 transition-all duration-500"></span>
                   {t('reserveNow')}
                 </Button>
               </div>
@@ -196,8 +226,9 @@ const CarFleet: React.FC = () => {
         <div className="text-center mt-12">
           <Button
             onClick={() => handleWhatsAppBooking('all available cars')}
-            className="border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark px-8 py-3 text-lg rounded-full transition-all duration-300"
+            className="border-2 border-luxury-gold text-luxury-gold hover:bg-luxury-gold hover:text-luxury-dark px-8 py-3 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-luxury-gold/30 group relative overflow-hidden"
           >
+            <span className="absolute inset-0 bg-gradient-to-r from-transparent via-luxury-gold/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
             View All Cars
           </Button>
         </div>

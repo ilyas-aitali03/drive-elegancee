@@ -8,6 +8,33 @@ const HeroSection: React.FC = () => {
   const { t } = useLanguage();
 
   const handleWhatsAppClick = () => {
+    // Create engine start sound effect
+    const playEngineSound = () => {
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(80, audioContext.currentTime);
+      oscillator.frequency.exponentialRampToValueAtTime(200, audioContext.currentTime + 0.3);
+      oscillator.frequency.exponentialRampToValueAtTime(150, audioContext.currentTime + 0.6);
+      
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.1, audioContext.currentTime + 0.1);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.6);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.6);
+    };
+
+    try {
+      playEngineSound();
+    } catch (error) {
+      console.log('Audio not supported');
+    }
+
     const message = encodeURIComponent("Hello! I'm interested in renting a car in Laâyoune. Can you help me with available options?");
     window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
   };
@@ -44,10 +71,12 @@ const HeroSection: React.FC = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-105 hover:shadow-[var(--shadow-gold)] group"
+              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-8 py-4 text-lg rounded-full transition-all duration-300 hover:scale-110 hover:shadow-2xl hover:shadow-luxury-gold/40 group relative overflow-hidden transform hover:rotate-1"
             >
-              <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-bounce" />
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
+              <MessageCircle className="w-5 h-5 mr-2 group-hover:animate-spin transition-transform duration-500" />
               {t('reserveNow')}
+              <div className="absolute inset-0 rounded-full bg-luxury-gold opacity-0 group-hover:opacity-20 group-hover:animate-ping"></div>
             </Button>
             
             <Button

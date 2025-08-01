@@ -27,7 +27,7 @@ const Navigation: React.FC = () => {
   };
 
   const handleWhatsAppClick = () => {
-    const message = encodeURIComponent("Hello! I'm interested in renting a car. Can you help me?");
+    const message = encodeURIComponent("Hello! I'm interested in renting a car in Laâyoune. Can you help me?");
     window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
   };
 
@@ -74,8 +74,9 @@ const Navigation: React.FC = () => {
             
             <Button
               onClick={handleWhatsAppClick}
-              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-6 py-2 rounded-full transition-all duration-300"
+              className="bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold px-6 py-2 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-luxury-gold/30 group relative overflow-hidden"
             >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
               {t('reserveNow')}
             </Button>
           </div>
@@ -123,8 +124,9 @@ const Navigation: React.FC = () => {
             
             <Button
               onClick={handleWhatsAppClick}
-              className="w-full bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-full transition-all duration-300"
+              className="w-full bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg hover:shadow-luxury-gold/30 group relative overflow-hidden"
             >
+              <span className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></span>
               {t('reserveNow')}
             </Button>
           </div>
