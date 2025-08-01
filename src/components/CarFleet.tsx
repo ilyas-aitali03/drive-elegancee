@@ -101,8 +101,8 @@ const CarFleet: React.FC = () => {
   ];
 
   const handleWhatsAppBooking = (carName: string) => {
-    const message = encodeURIComponent(`Hello! I'm interested in renting the ${carName}. Can you provide more details?`);
-    window.open(`https://wa.me/212600000000?text=${message}`, '_blank');
+    const message = encodeURIComponent(`Hello! I'm interested in renting the ${carName} in Laâyoune. Can you provide more details?`);
+    window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
   };
 
   return (

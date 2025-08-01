@@ -48,9 +48,9 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-bold mb-4 text-luxury-gold">Contact</h4>
             <div className="space-y-2 text-white/80">
-              <div>+212 600 000 000</div>
+              <div>+212 688 972 173</div>
               <div>info@moroccorent.com</div>
-              <div>Casablanca, Morocco</div>
+              <div>Laâyoune, Morocco</div>
             </div>
             
             {/* Social Media */}

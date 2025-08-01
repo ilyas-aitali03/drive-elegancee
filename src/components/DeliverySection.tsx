@@ -10,12 +10,12 @@ const DeliverySection: React.FC = () => {
   const [selectedLocation, setSelectedLocation] = useState('');
 
   const locations = [
-    'Casablanca',
-    'Rabat',
-    'Marrakech',
-    'Fes',
-    'Tangier',
-    'Agadir'
+    'Laâyoune Center',
+    'Laâyoune Beach',
+    'Laâyoune Airport',
+    'Foum El Oued',
+    'Boujdour',
+    'Tarfaya'
   ];
 
   return (
@@ -107,15 +107,15 @@ const DeliverySection: React.FC = () => {
                       <Phone className="w-5 h-5 mr-3 text-luxury-gold" />
                       <div>
                         <div className="font-semibold">Contact</div>
-                        <div className="text-sm text-white/80">+212 600 000 000</div>
+                        <div className="text-sm text-white/80">+212 688 972 173</div>
                       </div>
                     </div>
                   </div>
                   
                   <Button
                     onClick={() => {
-                      const message = encodeURIComponent(`Hello! I would like to request car delivery to ${selectedLocation}. Please provide details about available cars and delivery schedule.`);
-                      window.open(`https://wa.me/212600000000?text=${message}`, '_blank');
+                      const message = encodeURIComponent(`Hello! I would like to request car delivery to ${selectedLocation} in Laâyoune. Please provide details about available cars and delivery schedule.`);
+                      window.open(`https://wa.me/212688972173?text=${message}`, '_blank');
                     }}
                     className="w-full mt-6 bg-luxury-gold hover:bg-luxury-gold-light text-luxury-dark font-semibold py-3 rounded-xl transition-all duration-300"
                   >

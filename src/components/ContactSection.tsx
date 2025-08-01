@@ -7,11 +7,11 @@ const ContactSection: React.FC = () => {
   const { t } = useLanguage();
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/212600000000', '_blank');
+    window.open('https://wa.me/212688972173', '_blank');
   };
 
   const handlePhoneClick = () => {
-    window.open('tel:+212600000000', '_blank');
+    window.open('tel:+212688972173', '_blank');
   };
 
   return (
@@ -44,7 +44,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{t('phone')}</div>
-                    <div className="text-white/80">+212 600 000 000</div>
+                    <div className="text-white/80">+212 688 972 173</div>
                   </div>
                 </div>
 
@@ -66,7 +66,7 @@ const ContactSection: React.FC = () => {
                   </div>
                   <div>
                     <div className="font-semibold text-white">{t('location')}</div>
-                    <div className="text-white/80">Casablanca, Morocco</div>
+                    <div className="text-white/80">Laâyoune, Morocco</div>
                   </div>
                 </div>
               </div>
@@ -98,7 +98,7 @@ const ContactSection: React.FC = () => {
                 <div className="relative z-10 text-center text-gray-600">
                   <MapPin className="w-12 h-12 mx-auto mb-4 text-luxury-gold" />
                   <div className="font-semibold">Interactive Map</div>
-                  <div className="text-sm">Casablanca, Morocco</div>
+                  <div className="text-sm">Laâyoune, Morocco</div>
                 </div>
                 
                 {/* Map overlay elements */}
